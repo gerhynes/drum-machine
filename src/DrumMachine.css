@@ -1,0 +1,82 @@
+.DrumMachine {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #3494e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #ec6ead,
+    #3494e6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #ec6ead,
+    #3494e6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.display {
+  width: 900px;
+  height: 450px;
+  display: flex;
+  background: #828376;
+}
+
+.drum-pads,
+.controls {
+  width: 50%;
+}
+
+.drum-pads {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.pad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 120px;
+  color: #fff;
+  border-radius: 5px;
+  background: #b7bfca;
+}
+
+.pad.active {
+  box-shadow: 0 0 15px 5px hsl(98, 95%, 49%);
+}
+
+.controls {
+}
+
+.title-container {
+  background: #464b5f;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+.title {
+  color: #afbbc9;
+}
+
+.btn {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #011627;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 300ms ease-in, background-color 300ms ease-in;
+}
