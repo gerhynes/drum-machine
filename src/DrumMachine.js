@@ -22,8 +22,8 @@ export default class DrumMachine extends Component {
           </div>
           <div className="controls">
             <div className="title-container">
-              <h1>
-                <span className="title">FCC</span> 3000
+              <h1 className="title">
+                <span className="brand">FCC</span> 3000
               </h1>
               <div className="screen">DRUMS</div>
             </div>
