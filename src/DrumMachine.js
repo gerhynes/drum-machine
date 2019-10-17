@@ -8,7 +8,7 @@ export default class DrumMachine extends Component {
   render() {
     return (
       <div className="DrumMachine">
-        <div className="display">
+        <div className="machine">
           <div className="drum-pads">
             <div className="pad pad-1">Q</div>
             <div className="pad pad-2">W</div>
@@ -25,9 +25,24 @@ export default class DrumMachine extends Component {
               <h1>
                 <span className="title">FCC</span> 3000
               </h1>
+              <div className="screen">DRUMS</div>
             </div>
             <button className="btn">Power</button>
             <button className="btn">Volume</button>
+            <div className="dial">
+              <span className="indent"></span>
+            </div>
+            <div className="btn-group">
+              <div className="btn-small"></div>
+              <div className="btn-small"></div>
+              <div className="btn-small"></div>
+              <div className="btn-small"></div>
+              <div className="btn-small"></div>
+              <div className="btn-small"></div>
+              <div className="btn-small"></div>
+              <div className="btn-small"></div>
+              <div className="btn-small"></div>
+            </div>
           </div>
         </div>
       </div>
