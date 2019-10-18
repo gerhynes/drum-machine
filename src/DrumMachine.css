@@ -22,6 +22,7 @@
   height: 450px;
   display: flex;
   background-color: #b7bfca;
+  border: 3px solid #828376;
   border-radius: 4px;
 }
 
@@ -46,6 +47,7 @@
   align-items: center;
   height: 120px;
   width: 120px;
+  cursor: pointer;
   color: #fff;
   border-radius: 5px;
   background-color: #828376;
@@ -55,6 +57,10 @@
 
 .pad.active {
   box-shadow: 0 0 15px 5px hsl(98, 95%, 49%);
+}
+
+.controls {
+  border-left: 2px solid #828376;
 }
 
 .title-container {
@@ -94,7 +100,7 @@
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background: #afbbc9;
+  background: #464b5f;
   margin: 1rem;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -1px rgba(0, 0, 0, 0.2);
@@ -116,12 +122,27 @@
     0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
 
+.btn-panel {
+  display: flex;
+}
+
 .btn-group {
   width: 100%;
-  margin: 1rem;
+  margin: 0 1rem;
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(3, 2rem);
   gap: 1rem;
+  padding: 1rem;
+}
+
+.btn-group-1 {
+  border-top: 2px solid #464b5f;
+}
+
+.btn-group-2 {
+  background-color: #466f73;
+  border-radius: 3px;
 }
 
 .btn-small {
@@ -131,4 +152,8 @@
   border-radius: 2px;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -1px rgba(0, 0, 0, 0.2);
+}
+
+.btn-group-2 .btn-small {
+  background-color: #f6ffff;
 }

@@ -32,16 +32,29 @@ export default class DrumMachine extends Component {
             <div className="dial">
               <span className="indent"></span>
             </div>
-            <div className="btn-group">
-              <div className="btn-small"></div>
-              <div className="btn-small"></div>
-              <div className="btn-small"></div>
-              <div className="btn-small"></div>
-              <div className="btn-small"></div>
-              <div className="btn-small"></div>
-              <div className="btn-small"></div>
-              <div className="btn-small"></div>
-              <div className="btn-small"></div>
+            <div className="btn-panel">
+              <div className="btn-group btn-group-1">
+                <div className="btn-small"></div>
+                <div className="btn-small"></div>
+                <div className="btn-small"></div>
+                <div className="btn-small"></div>
+                <div className="btn-small"></div>
+                <div className="btn-small"></div>
+                <div className="btn-small"></div>
+                <div className="btn-small"></div>
+                <div className="btn-small"></div>
+              </div>
+              <div className="btn-group btn-group-2">
+                <div className="btn-small"></div>
+                <div className="btn-small"></div>
+                <div className="btn-small"></div>
+                <div className="btn-small"></div>
+                <div className="btn-small"></div>
+                <div className="btn-small"></div>
+                <div className="btn-small"></div>
+                <div className="btn-small"></div>
+                <div className="btn-small"></div>
+              </div>
             </div>
           </div>
         </div>
