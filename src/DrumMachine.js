@@ -4,6 +4,9 @@ import "./DrumMachine.css";
 export default class DrumMachine extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      display: "DRUMS"
+    };
   }
   render() {
     return (
@@ -25,7 +28,7 @@ export default class DrumMachine extends Component {
               <h1 className="title">
                 <span className="brand">FCC</span> 3000
               </h1>
-              <div className="screen">DRUMS</div>
+              <div className="screen">{this.state.display}</div>
             </div>
             <button className="btn">Power</button>
             <button className="btn">Volume</button>
