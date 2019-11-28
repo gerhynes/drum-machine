@@ -41,24 +41,6 @@
   font-size: 1.5rem;
 }
 
-.pad {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 120px;
-  width: 120px;
-  cursor: pointer;
-  color: #fff;
-  border-radius: 5px;
-  background-color: #828376;
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
-    0 3px 1px -1px rgba(0, 0, 0, 0.2);
-}
-
-.pad.active {
-  box-shadow: 0 0 15px 5px hsl(98, 95%, 49%);
-}
-
 .controls {
   border-left: 2px solid #828376;
 }
