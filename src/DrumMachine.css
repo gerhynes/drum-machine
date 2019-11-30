@@ -78,6 +78,10 @@
   border-right: 2rem solid #07080a;
 }
 
+.volume {
+  display: inline;
+}
+
 .dial {
   width: 5rem;
   height: 5rem;

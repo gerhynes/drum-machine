@@ -6,8 +6,11 @@ export default class DrumMachine extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      display: "DRUMS"
+      display: "DRUMS",
+      volume: 0.5
     };
+    this.clearDisplay = this.clearDisplay.bind(this);
+    this.changeVolume = this.changeVolume.bind(this);
   }
 
   static defaultProps = {
@@ -68,6 +71,22 @@ export default class DrumMachine extends Component {
       }
     ]
   };
+
+  changeVolume(e) {
+    this.setState({
+      volume: e.target.value,
+      display: `Volume ${e.target.value * 10}`
+    });
+    setTimeout(() => {
+      this.clearDisplay();
+    }, 1000);
+  }
+
+  clearDisplay() {
+    this.setState({
+      display: String.fromCharCode(160)
+    });
+  }
   render() {
     return (
       <div className="DrumMachine">
@@ -92,6 +111,16 @@ export default class DrumMachine extends Component {
             </div>
             <button className="btn">Power</button>
             <button className="btn">Volume</button>
+            <div className="volume">
+              <input
+                type="range"
+                min="0"
+                max="1"
+                step="0.1"
+                value={this.state.volume}
+                onChange={this.changeVolume}
+              />
+            </div>
             <div className="dial">
               <span className="indent"></span>
             </div>
