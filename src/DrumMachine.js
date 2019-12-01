@@ -91,61 +91,122 @@ export default class DrumMachine extends Component {
     return (
       <div className="DrumMachine">
         <div className="machine">
-          <div className="drum-pads">
-            {this.props.bank.map(pad => (
-              <DrumPad
-                id={pad.id}
-                key={pad.id}
-                keyCode={pad.keyCode}
-                keyTrigger={pad.keyTrigger}
-                clip={pad.url}
-              />
-            ))}
-          </div>
-          <div className="controls">
-            <div className="title-container">
-              <h1 className="title">
-                <span className="brand">FCC</span> 3000
-              </h1>
-              <div className="screen">{this.state.display}</div>
+          <div className="machine-header">
+            <div className="machine-title">
+              <h1 className="title">ACME</h1>
+              <span>R. Lynn </span>
+              <span>Integrated rhytm machine</span>
             </div>
-            <button className="btn">Power</button>
-            <button className="btn">Volume</button>
-            <div className="volume">
-              <input
-                type="range"
-                min="0"
-                max="1"
-                step="0.1"
-                value={this.state.volume}
-                onChange={this.changeVolume}
-              />
-            </div>
-            <div className="dial">
-              <span className="indent"></span>
-            </div>
-            <div className="btn-panel">
-              <div className="btn-group btn-group-1">
-                <div className="btn-small"></div>
-                <div className="btn-small"></div>
-                <div className="btn-small"></div>
-                <div className="btn-small"></div>
-                <div className="btn-small"></div>
-                <div className="btn-small"></div>
-                <div className="btn-small"></div>
-                <div className="btn-small"></div>
-                <div className="btn-small"></div>
+            <div className="grills">
+              <div className="grill">
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
               </div>
-              <div className="btn-group btn-group-2">
-                <div className="btn-small"></div>
-                <div className="btn-small"></div>
-                <div className="btn-small"></div>
-                <div className="btn-small"></div>
-                <div className="btn-small"></div>
-                <div className="btn-small"></div>
-                <div className="btn-small"></div>
-                <div className="btn-small"></div>
-                <div className="btn-small"></div>
+              <div className="grill">
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+              </div>
+              <div className="grill">
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+              </div>
+              <div className="grill">
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+              </div>
+            </div>
+          </div>
+
+          <div className="machine-body">
+            <div className="col-1">
+              <div className="dial dial-1"></div>
+              <div className="dial dial-2"></div>
+              <div className="dial dial-3"></div>
+              <div className="btn-small"></div>
+              <div className="btn-small"></div>
+              <div className="btn-small"></div>
+              <div className="btn-small"></div>
+              <div className="btn-small"></div>
+              <div className="volume">
+                <input
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.1"
+                  value={this.state.volume}
+                  onChange={this.changeVolume}
+                />
+              </div>
+            </div>
+            <div className="col-2">
+              <div className="title-container">
+                <h2 className="brand">
+                  <span className="brand-name">FCC</span> 3000
+                </h2>
+                <div className="screen">{this.state.display}</div>
+              </div>
+              <div className="soft-keys">
+                <div className="soft-key"></div>
+                <div className="soft-key"></div>
+                <div className="soft-key"></div>
+                <div className="soft-key"></div>
+              </div>
+              <div className="drum-pads">
+                {this.props.bank.map(pad => (
+                  <DrumPad
+                    id={pad.id}
+                    key={pad.id}
+                    keyCode={pad.keyCode}
+                    keyTrigger={pad.keyTrigger}
+                    clip={pad.url}
+                  />
+                ))}
+              </div>
+            </div>
+            <div className="col-3">
+              <div className="btn-panel">
+                <div className="btn-group btn-group-1">
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                </div>
+                <div className="btn-group btn-group-2">
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                  <div className="btn-small"></div>
+                </div>
+              </div>
+              <div className="dial">
+                <span className="indent"></span>
               </div>
             </div>
           </div>
