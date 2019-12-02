@@ -130,11 +130,18 @@ export default class DrumMachine extends Component {
               <div className="dial dial-1"></div>
               <div className="dial dial-2"></div>
               <div className="dial dial-3"></div>
+              <div className="lights">
+                <div className="light a-light">A</div>
+                <div className="light b-light">B</div>
+                <div className="light c-light">C</div>
+                <div className="light d-light">D</div>
+              </div>
               <div className="btn-small"></div>
               <div className="btn-small"></div>
               <div className="btn-small"></div>
               <div className="btn-small"></div>
               <div className="btn-small"></div>
+
               <div className="volume">
                 <input
                   type="range"
@@ -149,6 +156,7 @@ export default class DrumMachine extends Component {
             <div className="col-2">
               <div className="title-container">
                 <h2 className="brand">
+                  <span className="brand-desc">MIDI PRODUCTION CENTER</span>
                   <span className="brand-name">FCC</span> 3000
                 </h2>
                 <div className="screen">{this.state.display}</div>
@@ -205,8 +213,37 @@ export default class DrumMachine extends Component {
                   <div className="btn-small"></div>
                 </div>
               </div>
-              <div className="dial">
-                <span className="indent"></span>
+              <div className="controls">
+                <div className="data-entry">
+                  <div className="btn-small data-btn"></div>
+                  <div className="btn-small data-btn"></div>
+                  <div className="dial data-dial">
+                    <span className="indent"></span>
+                  </div>
+                </div>
+                <div className="cursor">
+                  <div className="btn-small cursor-top"></div>
+                  <div className="btn-small cursor-left"></div>
+                  <div className="btn-small cursor-right"></div>
+                  <div className="btn-small cursor-bottom"></div>
+                </div>
+              </div>
+              <div className="btn-group btn-group-3">
+                <div className="btn-lg">ERASE</div>
+                <div className="btn-lg">TIMING CORRECT</div>
+                <div className="btn-lg">TAP TEMPO</div>
+                <div className="btn-lg">MAIN SCREEN</div>
+                <div className="btn-lg">HELP</div>
+                <div className="btn-lg">{`<<`}</div>
+                <div className="btn-lg">{`<`}</div>
+                <div className="btn-lg">LOCATE</div>
+                <div className="btn-lg">{`>`}</div>
+                <div className="btn-lg">{`>>`}</div>
+                <div className="btn-lg rec">REC</div>
+                <div className="btn-lg over-dub">OVER DUB</div>
+                <div className="btn-lg">STOP</div>
+                <div className="btn-lg">PLAY</div>
+                <div className="btn-lg">PLAY START</div>
               </div>
             </div>
           </div>

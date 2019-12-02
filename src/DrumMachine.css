@@ -95,14 +95,46 @@
   background-color: #aba082;
 }
 
-.btn-small {
-  display: inline-block;
-  width: 2rem;
-  height: 0.5rem;
-  background-color: #fff;
-  border-radius: 3px;
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
-    0 3px 1px -1px rgba(0, 0, 0, 0.2);
+.lights {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.light {
+  margin: 0.3rem 0.5rem;
+  font-size: 10px;
+}
+
+.a-light::after,
+.b-light::before,
+.c-light::after,
+.d-light::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #07080a;
+}
+
+.a-light::after {
+  top: 10px;
+  left: 17px;
+}
+.c-light::after {
+  bottom: 10px;
+  left: 17px;
+}
+
+.b-light::before {
+  top: 10px;
+  right: 17px;
+}
+
+.d-light::before {
+  bottom: 10px;
+  right: 17px;
 }
 
 .volume {
@@ -118,6 +150,7 @@
   color: #46433a;
   padding: 0.5rem;
   margin: 1rem 0;
+  border-radius: 5px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
@@ -125,6 +158,11 @@
 .brand {
   margin: 0;
   padding: 0.5rem;
+}
+
+.brand-desc {
+  font-size: 10px;
+  margin-right: 0.5rem;
 }
 
 .brand-name {
@@ -144,18 +182,20 @@
   border-bottom: 1rem solid #07080a;
   border-left: 2rem solid #07080a;
   border-right: 2rem solid #07080a;
+  border-radius: 5px;
 }
 
 .soft-keys {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 0.5rem;
 }
 
 .soft-key {
   display: inline-block;
   width: 2rem;
   height: 0.5rem;
-  background-color: #fff;
+  background-color: #fff5d2;
   margin: 0.5rem;
   border-radius: 3px;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
@@ -170,12 +210,16 @@
   align-items: center;
   gap: 0.5rem;
   width: 100%;
-  padding: 0.5rem;
+  padding: 1rem;
   font-size: 1.5rem;
+  background-color: #8d8f8c;
 }
 
 .col-3 {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .btn-panel {
@@ -187,7 +231,8 @@
   margin: 0 1rem;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(3, 2rem);
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   padding: 1rem;
 }
@@ -196,11 +241,17 @@
   background-color: #72878c;
 }
 
-/* .controls {
-  border-left: 2px solid #828376;
+.controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
-.dial {
+.data-btn {
+  margin: 0 1rem;
+}
+
+.data-dial {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
@@ -210,54 +261,39 @@
     0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
 
-.btn {
-  margin: 1rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: #011627;
-  color: #fff;
-  border-radius: 5px;
-  border: 1px solid #fff;
-  cursor: pointer;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: color 300ms ease-in, background-color 300ms ease-in;
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
-    0 3px 1px -1px rgba(0, 0, 0, 0.2);
-}
 
-.btn-panel {
-  display: flex;
-}
-
-.btn-group {
-  width: 100%;
-  margin: 0 1rem;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(3, 2rem);
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.btn-group-1 {
-  border-top: 2px solid #464b5f;
-}
-
-.btn-group-2 {
-  background-color: #466f73;
-  border-radius: 3px;
-}
 
 .btn-small {
-  width: 100%;
-  height: 1rem;
-  background-color: #98bbc6;
-  border-radius: 2px;
+  display: inline-block;
+  width: 2rem;
+  height: 0.5rem;
+  background-color: #fff5d2;
+  border-radius: 3px;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
 
-.btn-group-2 .btn-small {
-  background-color: #f6ffff;
-} */
+.btn-group-3 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.btn-lg {
+  display: inline-block;
+  width: 3.5rem;
+  height: 1.75rem;
+  background-color: #fff5d2;
+  font-size: 10px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-lg.rec,
+.btn-lg.over-dub {
+  background-color: #b9392e;
+  color: #eae7dc;
+}
