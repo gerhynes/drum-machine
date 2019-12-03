@@ -189,10 +189,10 @@
 .soft-key {
   display: inline-block;
   width: 2rem;
-  height: 0.5rem;
+  height: 0.75rem;
   background-color: #fff5d2;
   margin: 0.5rem;
-  border-radius: 3px;
+  border-radius: 2px;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
@@ -215,25 +215,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.btn-panel {
-  display: flex;
-}
-
-.btn-group {
-  width: 100%;
   margin: 0 1rem;
-  display: grid;
-  justify-content: center;
-  justify-items: center;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.btn-group-1 .btn-small {
-  background-color: #72878c;
 }
 
 .controls {
@@ -250,24 +232,76 @@
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background: #464b5f;
-  margin: 1rem;
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
-    0 3px 1px -1px rgba(0, 0, 0, 0.2);
+  background: #eae5d2;
+  margin: 1rem auto;
+}
+
+.cursor {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.cursor-top {
+  grid-column: 3 / span 1;
+  grid-row: 1;
+}
+.cursor-right {
+  grid-column: 5 / span 1;
+  grid-row: 2;
+}
+.cursor-bottom {
+  grid-column: 3 / span 1;
+  grid-row: 3;
+}
+.cursor-left {
+  grid-column: 1 / span 1;
+  grid-row: 2;
+}
+
+/* Button styles */
+
+.btn-panel {
+  display: flex;
+}
+
+.btn-group {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  margin: 0 1rem;
+}
+
+.btn-group-1 .btn-small {
+  background-color: #72878c;
 }
 
 .btn-small {
   display: inline-block;
   width: 2rem;
-  height: 0.5rem;
+  height: 0.75rem;
   background-color: #fff5d2;
-  border-radius: 3px;
+  border-radius: 2px;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
 
-.btn-group-3 {
+.cursor-btn {
+  background-color: #635f56;
+}
+
+.btn-group-3,
+.btn-group-4 {
   grid-template-columns: repeat(5, 1fr);
+}
+
+.btn-group-4 {
+  background-color: #8f928b;
 }
 
 .btn-lg {

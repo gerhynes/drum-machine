@@ -94,7 +94,7 @@ export default class DrumMachine extends Component {
         <div className="machine">
           <div className="machine-header">
             <div className="machine-title">
-              <h1 className="title">ACME</h1>
+              <h2 className="title">ACME</h2>
               <span>R. Lynn </span>
               <span>Integrated rhytm machine</span>
             </div>
@@ -216,10 +216,10 @@ export default class DrumMachine extends Component {
                   </div>
                 </div>
                 <div className="cursor">
-                  <div className="btn-small cursor-top"></div>
-                  <div className="btn-small cursor-left"></div>
-                  <div className="btn-small cursor-right"></div>
-                  <div className="btn-small cursor-bottom"></div>
+                  <div className="btn-small cursor-btn cursor-top"></div>
+                  <div className="btn-small cursor-btn cursor-left"></div>
+                  <div className="btn-small cursor-btn cursor-right"></div>
+                  <div className="btn-small cursor-btn cursor-bottom"></div>
                 </div>
               </div>
               <div className="btn-group btn-group-3">
@@ -228,6 +228,8 @@ export default class DrumMachine extends Component {
                 <div className="btn-lg">TAP TEMPO</div>
                 <div className="btn-lg">MAIN SCREEN</div>
                 <div className="btn-lg">HELP</div>
+              </div>
+              <div className="btn-group btn-group-4">
                 <div className="btn-lg">{`<<`}</div>
                 <div className="btn-lg">{`<`}</div>
                 <div className="btn-lg">LOCATE</div>
