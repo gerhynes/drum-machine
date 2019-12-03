@@ -142,7 +142,10 @@ export default class DrumMachine extends Component {
               <div className="btn-small"></div>
               <div className="btn-small"></div>
               <div className="btn-small"></div>
-              <Volume value={this.state.volume} onChange={this.onChange} />
+              <Volume
+                value={this.state.volume}
+                changeVolume={this.changeVolume}
+              />
             </div>
             <div className="col-2">
               <div className="title-container">

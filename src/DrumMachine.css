@@ -78,7 +78,8 @@
   background-color: #a99e82;
 }
 
-.dial::after {
+.dial-1::after,
+.dial-2::after {
   content: "";
   position: absolute;
   width: 3px;

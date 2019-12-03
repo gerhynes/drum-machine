@@ -4,6 +4,15 @@
   padding: 1rem 0;
 }
 
+.Volume::before {
+  content: "VOLUME";
+  position: absolute;
+  transform: rotate(90deg);
+  font-size: 10px;
+  top: 20px;
+  left: 85px;
+}
+
 /* Remove default styles */
 input[type="range"] {
   appearance: none;
@@ -25,7 +34,7 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 3px;
   background: #fff5d2;
   cursor: pointer;
-  margin-top: -14px;
+  margin-top: -4px;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
     0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
