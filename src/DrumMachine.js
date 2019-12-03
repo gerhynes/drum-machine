@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Volume from "./Volume";
 import DrumPad from "./DrumPad";
 import "./DrumMachine.css";
 
@@ -141,17 +142,7 @@ export default class DrumMachine extends Component {
               <div className="btn-small"></div>
               <div className="btn-small"></div>
               <div className="btn-small"></div>
-
-              <div className="volume">
-                <input
-                  type="range"
-                  min="0"
-                  max="1"
-                  step="0.1"
-                  value={this.state.volume}
-                  onChange={this.changeVolume}
-                />
-              </div>
+              <Volume value={this.state.volume} onChange={this.onChange} />
             </div>
             <div className="col-2">
               <div className="title-container">
