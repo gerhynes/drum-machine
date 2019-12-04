@@ -169,6 +169,7 @@ export default class DrumMachine extends Component {
                     keyCode={pad.keyCode}
                     keyTrigger={pad.keyTrigger}
                     clip={pad.url}
+                    volume={this.state.volume}
                   />
                 ))}
               </div>
