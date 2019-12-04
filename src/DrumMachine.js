@@ -95,8 +95,11 @@ export default class DrumMachine extends Component {
           <div className="machine-header">
             <div className="machine-title">
               <h2 className="title">ACME</h2>
-              <span>R. Lynn </span>
-              <span>Integrated rhytm machine</span>
+              <span className="signature">R. Lynn </span>
+              <span className="machine-desc">
+                INTEGRATED RHYTHM MACHINE <br /> 16 BIT DRUM SAMPLER/MIDI
+                SEQUENCER
+              </span>
             </div>
             <div className="grills">
               <div className="grill">
@@ -224,23 +227,23 @@ export default class DrumMachine extends Component {
                 </div>
               </div>
               <div className="btn-group btn-group-3">
-                <div className="btn-lg">ERASE</div>
-                <div className="btn-lg">TIMING CORRECT</div>
-                <div className="btn-lg">TAP TEMPO</div>
-                <div className="btn-lg">MAIN SCREEN</div>
-                <div className="btn-lg">HELP</div>
+                <div className="btn-lg"></div>
+                <div className="btn-lg"></div>
+                <div className="btn-lg"></div>
+                <div className="btn-lg"></div>
+                <div className="btn-lg"></div>
               </div>
               <div className="btn-group btn-group-4">
-                <div className="btn-lg">{`<<`}</div>
-                <div className="btn-lg">{`<`}</div>
-                <div className="btn-lg">LOCATE</div>
-                <div className="btn-lg">{`>`}</div>
-                <div className="btn-lg">{`>>`}</div>
-                <div className="btn-lg rec">REC</div>
-                <div className="btn-lg over-dub">OVER DUB</div>
-                <div className="btn-lg">STOP</div>
-                <div className="btn-lg">PLAY</div>
-                <div className="btn-lg">PLAY START</div>
+                <div className="btn-lg"></div>
+                <div className="btn-lg"></div>
+                <div className="btn-lg"></div>
+                <div className="btn-lg"></div>
+                <div className="btn-lg"></div>
+                <div className="btn-lg rec"></div>
+                <div className="btn-lg over-dub"></div>
+                <div className="btn-lg"></div>
+                <div className="btn-lg"></div>
+                <div className="btn-lg"></div>
               </div>
             </div>
           </div>
