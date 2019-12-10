@@ -90,7 +90,7 @@ export default class DrumMachine extends Component {
   }
   render() {
     return (
-      <div className="DrumMachine">
+      <div className="DrumMachine" id="drum-machine">
         <div className="machine">
           <div className="machine-header">
             <div className="machine-title">
@@ -239,8 +239,8 @@ export default class DrumMachine extends Component {
                 <div className="btn-lg"></div>
                 <div className="btn-lg"></div>
                 <div className="btn-lg"></div>
-                <div className="btn-lg rec"></div>
-                <div className="btn-lg over-dub"></div>
+                <div className="btn-lg bank-1">Bank 1</div>
+                <div className="btn-lg bank-1">Bank 2</div>
                 <div className="btn-lg"></div>
                 <div className="btn-lg"></div>
                 <div className="btn-lg"></div>

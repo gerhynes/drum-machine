@@ -247,6 +247,8 @@
   border-radius: 50%;
   background: #eae5d2;
   margin: 1rem auto;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
 
 .cursor {
@@ -335,8 +337,8 @@
   text-align: center;
 }
 
-.btn-lg.rec,
-.btn-lg.over-dub {
+.btn-lg.bank-1,
+.btn-lg.bank-2 {
   background-color: #b9392e;
   color: #eae7dc;
 }
