@@ -8,15 +8,17 @@ export default class DrumMachine extends Component {
     super(props);
     this.state = {
       display: "DRUMS",
-      volume: 0.5
+      volume: 0.5,
+      currentBank: "bankOne"
     };
     this.updateDisplay = this.updateDisplay.bind(this);
     this.clearDisplay = this.clearDisplay.bind(this);
     this.changeVolume = this.changeVolume.bind(this);
+    this.chooseBank = this.chooseBank.bind(this);
   }
 
   static defaultProps = {
-    bank: [
+    bankOne: [
       {
         keyCode: 81,
         keyTrigger: "Q",
@@ -71,6 +73,62 @@ export default class DrumMachine extends Component {
         id: "Closed-HH",
         url: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
       }
+    ],
+    bankTwo: [
+      {
+        keyCode: 81,
+        keyTrigger: "Q",
+        id: "Chord-1",
+        url: "https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3"
+      },
+      {
+        keyCode: 87,
+        keyTrigger: "W",
+        id: "Chord-2",
+        url: "https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3"
+      },
+      {
+        keyCode: 69,
+        keyTrigger: "E",
+        id: "Chord-3",
+        url: "https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3"
+      },
+      {
+        keyCode: 65,
+        keyTrigger: "A",
+        id: "Shaker",
+        url: "https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3"
+      },
+      {
+        keyCode: 83,
+        keyTrigger: "S",
+        id: "Open-HH",
+        url: "https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3"
+      },
+      {
+        keyCode: 68,
+        keyTrigger: "D",
+        id: "Closed-HH",
+        url: "https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3"
+      },
+      {
+        keyCode: 90,
+        keyTrigger: "Z",
+        id: "Punchy-Kick",
+        url: "https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3"
+      },
+      {
+        keyCode: 88,
+        keyTrigger: "X",
+        id: "Side-Stick",
+        url: "https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3"
+      },
+      {
+        keyCode: 67,
+        keyTrigger: "C",
+        id: "Snare",
+        url: "https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3"
+      }
     ]
   };
 
@@ -82,6 +140,13 @@ export default class DrumMachine extends Component {
     setTimeout(() => {
       this.clearDisplay();
     }, 1000);
+  }
+
+  chooseBank(e) {
+    this.setState({
+      display: e.target.id,
+      currentBank: e.target.id
+    });
   }
 
   updateDisplay(value) {
@@ -173,17 +238,29 @@ export default class DrumMachine extends Component {
                 <div className="soft-key"></div>
               </div>
               <div className="drum-pads">
-                {this.props.bank.map(pad => (
-                  <DrumPad
-                    id={pad.id}
-                    key={pad.id}
-                    keyCode={pad.keyCode}
-                    keyTrigger={pad.keyTrigger}
-                    clip={pad.url}
-                    volume={this.state.volume}
-                    updateDisplay={this.updateDisplay}
-                  />
-                ))}
+                {this.state.currentBank === "bankOne"
+                  ? this.props.bankOne.map(pad => (
+                      <DrumPad
+                        id={pad.id}
+                        key={pad.id}
+                        keyCode={pad.keyCode}
+                        keyTrigger={pad.keyTrigger}
+                        clip={pad.url}
+                        volume={this.state.volume}
+                        updateDisplay={this.updateDisplay}
+                      />
+                    ))
+                  : this.props.bankTwo.map(pad => (
+                      <DrumPad
+                        id={pad.id}
+                        key={pad.id}
+                        keyCode={pad.keyCode}
+                        keyTrigger={pad.keyTrigger}
+                        clip={pad.url}
+                        volume={this.state.volume}
+                        updateDisplay={this.updateDisplay}
+                      />
+                    ))}
               </div>
             </div>
             <div className="col-3">
@@ -248,8 +325,20 @@ export default class DrumMachine extends Component {
                 <div className="btn-lg"></div>
                 <div className="btn-lg"></div>
                 <div className="btn-lg"></div>
-                <div className="btn-lg bank-1">Bank 1</div>
-                <div className="btn-lg bank-1">Bank 2</div>
+                <button
+                  className="btn-lg bank-1"
+                  id="bankOne"
+                  onClick={this.chooseBank}
+                >
+                  Bank 1
+                </button>
+                <button
+                  className="btn-lg bank-1"
+                  id="bankTwo"
+                  onClick={this.chooseBank}
+                >
+                  Bank 2
+                </button>
                 <div className="btn-lg"></div>
                 <div className="btn-lg"></div>
                 <div className="btn-lg"></div>

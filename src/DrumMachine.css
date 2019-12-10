@@ -180,7 +180,7 @@
 .screen {
   font-family: "Orbitron", sans-serif;
   font-size: 2rem;
-  width: 90%;
+  width: 95%;
   background-color: #5faad1;
   color: rgba(0, 0, 0, 0.4);
   text-align: right;
@@ -341,4 +341,11 @@
 .btn-lg.bank-2 {
   background-color: #b9392e;
   color: #eae7dc;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-lg.bank-1:active,
+.btn-lg.bank-2:active {
+  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
 }
