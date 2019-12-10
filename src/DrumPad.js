@@ -36,6 +36,7 @@ export default class DrumPad extends Component {
     audio.cuurrentTime = 0;
     audio.volume = this.props.volume;
     audio.play();
+    this.props.updateDisplay(this.props.id.replace(/-/g, " "));
     this.activatePad();
     setTimeout(() => this.activatePad(), 100);
   }

@@ -10,6 +10,7 @@ export default class DrumMachine extends Component {
       display: "DRUMS",
       volume: 0.5
     };
+    this.updateDisplay = this.updateDisplay.bind(this);
     this.clearDisplay = this.clearDisplay.bind(this);
     this.changeVolume = this.changeVolume.bind(this);
   }
@@ -83,11 +84,18 @@ export default class DrumMachine extends Component {
     }, 1000);
   }
 
+  updateDisplay(value) {
+    this.setState({
+      display: value
+    });
+  }
+
   clearDisplay() {
     this.setState({
       display: String.fromCharCode(160)
     });
   }
+
   render() {
     return (
       <div className="DrumMachine" id="drum-machine">
@@ -173,6 +181,7 @@ export default class DrumMachine extends Component {
                     keyTrigger={pad.keyTrigger}
                     clip={pad.url}
                     volume={this.state.volume}
+                    updateDisplay={this.updateDisplay}
                   />
                 ))}
               </div>
