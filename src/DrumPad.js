@@ -44,7 +44,7 @@ export default class DrumPad extends Component {
   render() {
     return (
       <div
-        className={`pad ${this.state.isActive && "active"}`}
+        className={`drum-pad ${this.state.isActive && "active"}`}
         id={this.props.id}
         onClick={this.playSound}
       >

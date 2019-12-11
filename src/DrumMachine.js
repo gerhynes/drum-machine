@@ -165,45 +165,45 @@ export default class DrumMachine extends Component {
     return (
       <div className="DrumMachine" id="drum-machine">
         <div className="machine">
-          <div className="machine-header">
-            <div className="machine-title">
-              <h2 className="title">ACME</h2>
-              <span className="signature">R. Lynn </span>
-              <span className="machine-desc">
+          <header className="machine-header">
+            <div className="machine-header__title">
+              <h2 className="machine-header__brand">ACME</h2>
+              <span className="machine-header__signature">R. Lynn </span>
+              <span className="machine-header__desc">
                 INTEGRATED RHYTHM MACHINE <br /> 16 BIT DRUM SAMPLER/MIDI
                 SEQUENCER
               </span>
             </div>
-            <div className="grills">
+            <div className="machine-header__grills">
               <div className="grill">
-                <div className="bar"></div>
-                <div className="bar"></div>
-                <div className="bar"></div>
-                <div className="bar"></div>
+                <div className="grill__bar"></div>
+                <div className="grill__bar"></div>
+                <div className="grill__bar"></div>
+                <div className="grill__bar"></div>
               </div>
               <div className="grill">
-                <div className="bar"></div>
-                <div className="bar"></div>
-                <div className="bar"></div>
-                <div className="bar"></div>
+                <div className="grill__bar"></div>
+                <div className="grill__bar"></div>
+                <div className="grill__bar"></div>
+                <div className="grill__bar"></div>
               </div>
               <div className="grill">
-                <div className="bar"></div>
-                <div className="bar"></div>
-                <div className="bar"></div>
-                <div className="bar"></div>
+                <div className="grill__bar"></div>
+                <div className="grill__bar"></div>
+                <div className="grill__bar"></div>
+                <div className="grill__bar"></div>
               </div>
               <div className="grill">
-                <div className="bar"></div>
-                <div className="bar"></div>
-                <div className="bar"></div>
-                <div className="bar"></div>
+                <div className="grill__bar"></div>
+                <div className="grill__bar"></div>
+                <div className="grill__bar"></div>
+                <div className="grill__bar"></div>
               </div>
             </div>
-          </div>
+          </header>
 
           <div className="machine-body">
-            <div className="col-1">
+            <div className="volume-controls">
               <div className="dial dial-1"></div>
               <div className="dial dial-2"></div>
               <div className="dial dial-3"></div>
@@ -213,23 +213,27 @@ export default class DrumMachine extends Component {
                 <div className="light c-light">C</div>
                 <div className="light d-light">D</div>
               </div>
-              <div className="btn-small"></div>
-              <div className="btn-small"></div>
-              <div className="btn-small"></div>
-              <div className="btn-small"></div>
-              <div className="btn-small"></div>
+              <div className="btn btn-small"></div>
+              <div className="btn btn-small"></div>
+              <div className="btn btn-small"></div>
+              <div className="btn btn-small"></div>
+              <div className="btn btn-small"></div>
               <Volume
                 value={this.state.volume}
                 changeVolume={this.changeVolume}
               />
             </div>
-            <div className="col-2">
-              <div className="title-container">
-                <h2 className="brand">
-                  <span className="brand-desc">MIDI PRODUCTION CENTER</span>
-                  <span className="brand-name">FCC</span> 3000
+            <div className="drum-contorls">
+              <div className="display-container">
+                <h2 className="display__brand">
+                  <span className="display__brand-desc">
+                    MIDI PRODUCTION CENTER
+                  </span>
+                  <span className="display__brand-name">FCC</span> 3000
                 </h2>
-                <div className="screen">{this.state.display}</div>
+                <div className="display__screen" id="display">
+                  {this.state.display}
+                </div>
               </div>
               <div className="soft-keys">
                 <div className="soft-key"></div>
@@ -263,85 +267,83 @@ export default class DrumMachine extends Component {
                     ))}
               </div>
             </div>
-            <div className="col-3">
+            <div className="bank-controls">
               <div className="btn-panel">
-                <div className="btn-group btn-group-1">
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
+                <div className="btn-group date-btns">
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
                 </div>
-                <div className="btn-group btn-group-2">
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
-                  <div className="btn-small"></div>
+                <div className="btn-group command-btns">
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
+                  <div className="btn btn-small"></div>
                 </div>
               </div>
-              <div className="controls">
+              <div className="data-controls">
                 <div className="data-entry">
-                  <div className="btn-small data-btn"></div>
-                  <div className="btn-small data-btn"></div>
-                  <div className="dial data-dial">
-                    <span className="indent"></span>
-                  </div>
+                  <div className="btn btn-small data-btn"></div>
+                  <div className="btn btn-small data-btn"></div>
+                  <div className="dial data-dial"></div>
                 </div>
                 <div className="cursor">
-                  <div className="btn-small cursor-btn cursor-top"></div>
-                  <div className="btn-small cursor-btn cursor-left"></div>
-                  <div className="btn-small cursor-btn cursor-right"></div>
-                  <div className="btn-small cursor-btn cursor-bottom"></div>
+                  <div className="btn btn-small cursor-btn cursor-top"></div>
+                  <div className="btn btn-small cursor-btn cursor-left"></div>
+                  <div className="btn btn-small cursor-btn cursor-right"></div>
+                  <div className="btn btn-small cursor-btn cursor-bottom"></div>
                 </div>
               </div>
-              <div className="btn-group btn-group-3">
-                <div className="btn-lg"></div>
-                <div className="btn-lg"></div>
-                <div className="btn-lg"></div>
-                <div className="btn-lg"></div>
-                <div className="btn-lg"></div>
+              <div className="btn-group time-btns">
+                <div className="btn btn-lg"></div>
+                <div className="btn btn-lg"></div>
+                <div className="btn btn-lg"></div>
+                <div className="btn btn-lg"></div>
+                <div className="btn btn-lg"></div>
               </div>
-              <div className="btn-group btn-group-4">
-                <div className="btn-lg"></div>
-                <div className="btn-lg"></div>
-                <div className="btn-lg"></div>
-                <div className="btn-lg"></div>
-                <div className="btn-lg"></div>
+              <div className="btn-group bank-btns">
+                <div className="btn btn-lg"></div>
+                <div className="btn btn-lg"></div>
+                <div className="btn btn-lg"></div>
+                <div className="btn btn-lg"></div>
+                <div className="btn btn-lg"></div>
                 <button
-                  className="btn-lg bank-1"
+                  className="btn btn-lg bank-1"
                   id="bankOne"
                   onClick={this.chooseBank}
                 >
                   Bank 1
                 </button>
                 <button
-                  className="btn-lg bank-1"
+                  className="btn btn-lg bank-1"
                   id="bankTwo"
                   onClick={this.chooseBank}
                 >
                   Bank 2
                 </button>
-                <div className="btn-lg"></div>
-                <div className="btn-lg"></div>
-                <div className="btn-lg"></div>
+                <div className="btn btn-lg"></div>
+                <div className="btn btn-lg"></div>
+                <div className="btn btn-lg"></div>
               </div>
             </div>
           </div>

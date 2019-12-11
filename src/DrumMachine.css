@@ -2,11 +2,11 @@
   width: 940px;
   height: 640px;
   background-color: #d5cfc3;
-  border: 3px solid #828376;
   border-radius: 4px;
-  border-left: 1.5rem solid #b5a999;
+  border-top: 3px solid #828376;
   border-right: 1.5rem solid #b5a999;
   border-bottom: 3rem solid #b5a999;
+  border-left: 1.5rem solid #b5a999;
 }
 
 .machine-header {
@@ -15,7 +15,7 @@
   height: 4rem;
 }
 
-.machine-title {
+.machine-header__title {
   flex: 1;
   width: 100%;
   display: flex;
@@ -23,22 +23,21 @@
   align-items: center;
 }
 
-.title {
-  display: inline;
+.machine-header__brand {
   color: #d8211d;
 }
 
-.signature {
+.machine-header__signature {
   font-family: "Dancing Script", sans-serif;
   font-size: 1.3rem;
 }
 
-.machine-desc {
+.machine-header__desc {
   font-size: 10px;
   text-align: center;
 }
 
-.grills {
+.machine-header__grills {
   flex: 1;
   width: 100%;
   display: grid;
@@ -49,7 +48,7 @@
   margin: 1rem;
 }
 
-.bar {
+.grill__bar {
   height: 0.3rem;
   width: 100%;
   background-color: #7e756e;
@@ -62,7 +61,7 @@
   grid-template-columns: 1fr 4fr 4fr;
 }
 
-.col-1 {
+.volume-controls {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -99,14 +98,8 @@
   height: 15px;
   top: 0;
   right: 50%;
-  margin-right: -1px;
-  background: #a99e82;
-}
-
-.dial-3::after {
-  height: 7.5px;
   margin-right: -1.5px;
-  background-color: #aba082;
+  background: #a99e82;
 }
 
 .lights {
@@ -136,6 +129,7 @@
   top: 10px;
   left: 17px;
 }
+
 .c-light::after {
   bottom: 10px;
   left: 17px;
@@ -151,7 +145,7 @@
   right: 17px;
 }
 
-.title-container {
+.display-container {
   background: #d5cfc3;
   width: 100%;
   text-align: right;
@@ -163,21 +157,21 @@
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
-.brand {
+.display__brand {
   margin: 0;
   padding: 0.5rem;
 }
 
-.brand-desc {
+.display__brand-desc {
   font-size: 10px;
   margin-right: 0.5rem;
 }
 
-.brand-name {
+.display__brand-name {
   color: #aaa494;
 }
 
-.screen {
+.display__screen {
   font-family: "Orbitron", sans-serif;
   font-size: 2rem;
   width: 95%;
@@ -223,7 +217,7 @@
   background-color: #8d8f8c;
 }
 
-.col-3 {
+.bank-controls {
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -231,7 +225,7 @@
   margin: 0 1rem;
 }
 
-.controls {
+.data-controls {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -295,46 +289,42 @@
   margin: 0 1rem;
 }
 
-.btn-group-1 .btn-small {
-  background-color: #72878c;
+.btn {
+  display: inline-block;
+  background-color: #fff5d2;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
+    0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
 
 .btn-small {
-  display: inline-block;
   width: 2rem;
   height: 0.75rem;
-  background-color: #fff5d2;
   border-radius: 2px;
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
-    0 3px 1px -1px rgba(0, 0, 0, 0.2);
+}
+
+.btn-lg {
+  width: 3.5rem;
+  height: 1.75rem;
+  font-size: 12px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.date-btns .btn-small {
+  background-color: #72878c;
 }
 
 .cursor-btn {
   background-color: #635f56;
 }
 
-.btn-group-3,
-.btn-group-4 {
+.time-btns,
+.bank-btns {
   grid-template-columns: repeat(5, 1fr);
 }
 
-.btn-group-4 {
+.bank-btns {
   background-color: #8f928b;
-}
-
-.btn-lg {
-  display: inline-block;
-  width: 3.5rem;
-  height: 1.75rem;
-  background-color: #fff5d2;
-  font-size: 10px;
-  border-radius: 3px;
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12),
-    0 3px 1px -1px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 .btn-lg.bank-1,

@@ -1,4 +1,4 @@
-.pad {
+.drum-pad {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,6 +12,6 @@
     0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
 
-.pad.active {
+.drum-pad.active {
   box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
 }
