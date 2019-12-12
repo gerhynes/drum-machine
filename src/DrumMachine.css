@@ -339,3 +339,46 @@
 .btn-lg.bank-2:active {
   box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
 }
+
+@media (max-width: 940px) {
+  .machine {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .machine-header__grills {
+    display: none;
+  }
+
+  .machine-body {
+    grid-template-columns: 1fr;
+  }
+
+  .volume-controls > *:not(.Volume) {
+    display: none;
+  }
+
+  .soft-keys {
+    display: none;
+  }
+
+  .bank-controls {
+    padding: 0;
+    margin: 0;
+  }
+
+  .btn-panel {
+    display: none;
+  }
+  .data-controls {
+    display: none;
+  }
+
+  .time-btns {
+    display: none;
+  }
+
+  .bank-btns {
+    margin: 0;
+  }
+}

@@ -107,3 +107,15 @@ input[type="range"]::-ms-fill-upper {
 input[type="range"]:focus::-ms-fill-upper {
   background: #0b0b0d;
 }
+
+@media (max-width: 940px) {
+  .Volume {
+    transform: rotate(0deg);
+    margin-top: 0.5rem;
+  }
+  .Volume::before {
+    transform: rotate(0deg);
+    top: 0px;
+    left: 65px;
+  }
+}
