@@ -48,7 +48,11 @@ export default class DrumPad extends Component {
         id={this.props.id}
         onClick={this.playSound}
       >
-        <audio src={this.props.clip} id={this.props.keyTrigger}></audio>
+        <audio
+          src={this.props.clip}
+          id={this.props.keyTrigger}
+          className="clip"
+        ></audio>
         {this.props.keyTrigger}
       </div>
     );
