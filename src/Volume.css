@@ -13,6 +13,8 @@
   left: 85px;
 }
 
+/* Cross browser styles from Daniel Stern's article "Styling Cross-Browser Compatible Range Inputs with CSS": https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/ */
+
 /* Remove default styles */
 input[type="range"] {
   appearance: none;

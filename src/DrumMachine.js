@@ -328,21 +328,21 @@ export default class DrumMachine extends Component {
                 <div className="btn btn-lg"></div>
                 <div className="btn btn-lg"></div>
                 <button
-                  className="btn btn-lg bank-1"
+                  className="btn btn-lg bank-btn bank-1"
                   id="bankOne"
                   onClick={this.chooseBank}
                 >
                   Bank 1
                 </button>
                 <button
-                  className="btn btn-lg bank-1"
+                  className="btn btn-lg bank-btn bank-1"
                   id="bankTwo"
                   onClick={this.chooseBank}
                 >
                   Bank 2
                 </button>
-                <div className="btn btn-lg"></div>
-                <div className="btn btn-lg"></div>
+                <div className="btn btn-lg bank-btn"></div>
+                <div className="btn btn-lg bank-btn"></div>
                 <div className="btn btn-lg"></div>
               </div>
             </div>

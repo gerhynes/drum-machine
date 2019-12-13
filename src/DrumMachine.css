@@ -21,20 +21,24 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 0.3rem;
 }
 
 .machine-header__brand {
   color: #d8211d;
+  padding: 0.3rem;
 }
 
 .machine-header__signature {
   font-family: "Dancing Script", sans-serif;
   font-size: 1.3rem;
+  padding: 0.3rem;
 }
 
 .machine-header__desc {
   font-size: 10px;
   text-align: center;
+  padding: 0.3rem;
 }
 
 .machine-header__grills {
@@ -346,6 +350,14 @@
     min-height: 100vh;
   }
 
+  .machine-header {
+    min-height: 4rem;
+  }
+
+  .machine-header__title {
+    flex-wrap: wrap;
+  }
+
   .machine-header__grills {
     display: none;
   }
@@ -358,27 +370,30 @@
     display: none;
   }
 
-  .soft-keys {
-    display: none;
-  }
-
   .bank-controls {
     padding: 0;
     margin: 0;
   }
 
-  .btn-panel {
-    display: none;
-  }
-  .data-controls {
-    display: none;
-  }
-
+  .soft-keys,
+  .btn-panel,
+  .data-controls,
   .time-btns {
     display: none;
   }
 
   .bank-btns {
     margin: 0;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .bank-btns > *:not(.bank-btn) {
+    display: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .machine-header {
+    margin-bottom: 4rem;
   }
 }
