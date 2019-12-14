@@ -1,0 +1,10 @@
+.Footer {
+  font-family: "Orbitron", sans-serif;
+  margin: 0.5rem;
+}
+
+.Footer a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #000000;
+}
